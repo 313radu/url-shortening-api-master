@@ -1,0 +1,41 @@
+// Widths
+
+$minMaxWidth: 800px;
+
+$minWidth: 375px;
+$maxWidth: 1440px;
+
+// Colors
+
+$clr-primary-100: hsl(180, 66%, 49%);
+$clr-primary-200: hsl(257, 27%, 26%);
+
+$clr-secondary-100: sl(0, 87%, 67%);
+$clr-secondary-200: hsl(0, 100%, 50%);
+$clr-secondary-300: hsla(180, 66%, 49%, 0.645);
+
+$clr-neutral-100: hsl(0, 0%, 75%);
+$clr-neutral-200: hsl(257, 7%, 63%);
+$clr-neutral-300: hsl(255, 11%, 22%);
+$clr-neutral-400: hsl(260, 8%, 14%);
+$clr-neutral-500: hsl(0, 0%, 100%);
+$clr-neutral-600: hsla(0, 4%, 90%, 0.691);
+
+// Font Size
+
+$fs-100: 1.125rem;
+
+// Font Familys
+
+$ff-100: "Poppins", sans-serif;
+
+// Font Weights
+
+$fw-100: 500;
+$fw-200: 700;
+
+// Margin
+
+$margin: 1em;
+
+$transition: .3s;

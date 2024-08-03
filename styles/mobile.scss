@@ -1,0 +1,525 @@
+@import "./variables";
+@import "./mixin";
+
+@media (width < $minMaxWidth) {
+    // Header
+
+    header {
+        min-width: $minWidth;
+        width: 100%;
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        // Logo
+
+        & .logo {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0px;
+
+            & svg {
+                margin-left: 1em;
+            }
+        }
+        // Navbar
+
+        & nav {
+            width: 100%;
+            margin-inline: 1em 1em;
+            height: 0;
+            display: block;
+            overflow: hidden;
+
+            &.active-nav {
+                width: 100%;
+                height: 400px;
+                display: block;
+                background-color: $clr-primary-200;
+                transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+                border-radius: 1em;
+                transform: translateY(80px);
+                margin-block-end: 80px;
+            }
+
+            & ul,
+            & form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            & ul {
+                height: 60%;
+                gap: 2em;
+
+                & li a {
+                    font-family: $ff-100;
+                    color: $clr-neutral-500;
+                    font-size: $fs-100 + 0.1rem;
+                    transition: $transition ease-out;
+                    font-weight: $fw-200;
+                }
+            }
+
+            & form {
+                height: 40%;
+                border-top: 1px solid $clr-neutral-100;
+
+                & button {
+                    width: 80%;
+                    height: 50px;
+                    border: none;
+                    border-radius: 3em;
+                    color: $clr-neutral-500;
+                    font-weight: $fw-200;
+                    font-size: $fs-100 + 0.1rem;
+                }
+
+                & button:nth-child(1) {
+                    background-color: transparent;
+                    margin-block-end: 1em;
+                }
+
+                & button:nth-child(2) {
+                    @include getStartedButton;
+                }
+            }
+        }
+
+        & .menu-button {
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 40px;
+            background-color: transparent;
+            font-size: $fs-100 + 0.5rem;
+            border: none;
+            z-index: 10;
+        }
+    }
+
+    // Main
+
+    main {
+        min-width: $minWidth;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        // Section 1
+
+        & .section-1 {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 1.5em;
+            margin-block-end: 4em;
+
+            //   Left Sectiion
+
+            & .left-section {
+                width: 100%;
+                height: auto;
+                order: 2;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                & h1 {
+                    font-family: $ff-100;
+                    font-size: $fs-100 + 1.5rem;
+                    font-weight: $fw-200;
+                    text-align: center;
+                }
+
+                & p {
+                    width: 75%;
+                    font-family: $ff-100;
+                    font-size: $fs-100;
+                    text-wrap: wrap;
+                    text-align: center;
+                    margin-block: 1em 1em;
+                    color: $clr-neutral-200;
+                    line-height: 25px;
+                    font-weight: $fw-100;
+                }
+
+                & button {
+                    width: 50%;
+                    height: 50px;
+                    @include getStartedButton;
+                    font-size: $fs-100;
+                    font-weight: $fw-200;
+                    letter-spacing: 1px;
+                }
+            }
+
+            // Right Section
+
+            & .right-section {
+                width: 100%;
+                height: 50%;
+                order: 1;
+
+                & img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+
+        // Section 2
+
+        & .section-2 {
+            width: 90%;
+            min-height: 180px;
+            background-color: $clr-neutral-600;
+
+            & .url-shortner {
+                width: 100%;
+                min-height: 190px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+
+                border-radius: 1em;
+                background-image: url("/images/bg-boost-mobile.svg");
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-color: $clr-primary-200;
+
+                & input {
+                    width: 80%;
+                    height: 50px;
+                    border-radius: 0.5em;
+                    text-indent: 1em;
+                    margin-block: 2em 2em;
+                }
+
+                & input::placeholder {
+                    text-indent: 1em;
+                }
+
+                & button {
+                    width: 80%;
+                    height: 50px;
+                    border-radius: 0.5em;
+                    border: none;
+                    font-family: $ff-100;
+                    font-weight: 500;
+                    font-size: $fs-100;
+                    color: $clr-neutral-500;
+                    background-color: $clr-primary-100;
+                }
+
+                & .input-url-info {
+                    display: none;
+                }
+            }
+
+            & #results {
+                width: 100%;
+                height: auto;
+                margin-block-start: $margin;
+
+                & .url-list {
+                    width: 90%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1em;
+                    margin-inline: auto;
+
+                    & .url {
+                        width: 100%;
+                        height: 150px;
+                        background-color: $clr-neutral-500;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        border-radius: 0.5em;
+                        margin-block: 0 $margin;
+
+                        & .url-info {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-evenly;
+                            align-items: center;
+
+                            & .original-url {
+                                width: 100%;
+                                font-weight: $fw-200;
+                                margin-block-end: 0.4em;
+                            }
+
+                            & .short-url {
+                                width: 100%;
+                                text-align: left;
+                                color: $clr-primary-100;
+                                // margin-left: $margin + 3em;
+                                margin-inline: 2em auto;
+                            }
+
+                            @media (width < 540px) {
+                                & .short-url {
+                                    margin-inline: 1.5em auto;
+                                }
+                            }
+                        }
+                        & .copy-btn {
+                            margin-block-end: $margin;
+                            margin-inline: auto;
+                            width: 90%;
+                            height: 50px;
+                            @include getStartedButton;
+                            border-radius: 0.3em;
+                        }
+
+                        & .original-url-box {
+                            width: 90%;
+                            height: auto;
+                            overflow-x: scroll;
+                            overflow-y: hidden;
+                            white-space: nowrap;
+                            display: flex;
+                            border-bottom: 2px solid $clr-neutral-100;
+                            margin-inline: auto;
+                        }
+
+                        & .original-url-box::-webkit-scrollbar {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Section 3
+
+        & .section-3 {
+            width: 100%;
+            min-height: 80vh;
+
+            // Top Section
+
+            & .top-section {
+                width: 100%;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: $clr-neutral-600;
+
+                & h2,
+                & p {
+                    text-align: center;
+                    font-family: $ff-100;
+                }
+
+                & h2 {
+                    font-size: $fs-100 + 0.25rem;
+                }
+
+                & p {
+                    font-size: $fs-100 - 0.3rem;
+                    color: $clr-neutral-200;
+                    margin-inline: $margin + 4em $margin + 4em;
+                    margin-block-start: $margin;
+                }
+            }
+
+            // Bottom Section
+
+            & .bottom-section {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: $clr-neutral-600;
+                gap: 5em;
+                position: relative;
+
+                & .card {
+                    margin-block-start: $margin;
+                    width: 300px;
+                    height: 230px;
+                    background-color: $clr-neutral-500;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1em;
+
+                    & .card-icon {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: -30px;
+                        left: 38%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $clr-primary-200;
+
+                        & img {
+                            width: 55%;
+                            height: 55%;
+                            display: block;
+                        }
+                    }
+
+                    & .card-title,
+                    & .card-text {
+                        font-family: $ff-100;
+                    }
+
+                    & .card-title {
+                        margin-left: $margin;
+                        font-weight: $fw-200;
+                        font-size: $fs-100;
+                    }
+
+                    & .card-text {
+                        margin-inline: $margin + 2em $margin + 2em;
+                        font-size: $fs-100 - 0.4rem;
+                        font-family: $ff-100;
+                        color: $clr-neutral-200;
+                        text-align: center;
+                        line-height: 22px;
+                    }
+                }
+
+                & .card-3 {
+                    margin-block-end: $margin + 1em;
+                }
+            }
+
+            & .bottom-section::before {
+                content: "";
+                width: 5px;
+                height: 80%;
+                position: absolute;
+                left: 48.5%;
+                background-color: $clr-primary-100;
+            }
+        
+        }
+
+        // Section 4
+
+        & .section-4 {
+            width: 100%;
+            height: 30vh;
+            background-image: url("/images/bg-boost-mobile.svg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: $clr-primary-200;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2em;
+
+            & h3 {
+                font-family: $ff-100;
+                font-size: $fs-100 + .5rem;
+                color: $clr-neutral-500;
+                font-weight: $fw-200;
+            }
+
+            & button {
+                width: 180px;
+                height: 50px;
+                @include getStartedButton;
+                transition: $transition ease-out;
+
+                & a {
+                    color: $clr-neutral-500;
+                    font-family: $ff-100;
+                    font-size: $fs-100;
+                }
+            }
+        }
+    }
+
+    // Footer
+
+    footer {
+        min-width: $minWidth;
+        width: 100%;
+        min-height: 60vh;
+        background-color: $clr-neutral-400;
+
+        & .logo {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & svg path {
+                fill: $clr-neutral-500;
+            }
+        }
+
+        & ul {
+            width: 100%;
+            margin-block: $margin + 1em $margin + 1em; 
+
+            & li:nth-child(1) {
+                font-weight: $fw-100;
+                color: $clr-neutral-500;
+                font-size: $fs-100 - .1rem;
+                font-family: $ff-100;
+            }
+
+            & li {
+                display: block;
+                text-align: center;
+
+                & a {
+                    color: $clr-neutral-600;
+                    font-family: $ff-100;
+                    font-weight: $fw-100;
+                    font-size: $fs-100 - .3rem;
+                }
+            }
+        }
+
+        & ul:nth-child(6) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2em;
+
+            & li a {
+                font-size: $fs-100 + .5rem;
+                color: $clr-neutral-500;
+            }
+        }
+    }
+}

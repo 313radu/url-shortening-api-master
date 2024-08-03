@@ -1,0 +1,454 @@
+@media (width < 800px) {
+  header {
+    min-width: 375px;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  header .logo {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+  }
+  header .logo svg {
+    margin-left: 1em;
+  }
+  header nav {
+    width: 100%;
+    margin-inline: 1em 1em;
+    height: 0;
+    display: block;
+    overflow: hidden;
+  }
+  header nav.active-nav {
+    width: 100%;
+    height: 400px;
+    display: block;
+    background-color: hsl(257, 27%, 26%);
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-radius: 1em;
+    transform: translateY(80px);
+    margin-block-end: 80px;
+  }
+  header nav ul, header nav form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav ul {
+    height: 60%;
+    gap: 2em;
+  }
+  header nav ul li a {
+    font-family: "Poppins", sans-serif;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.225rem;
+    transition: 0.3s ease-out;
+    font-weight: 700;
+  }
+  header nav form {
+    height: 40%;
+    border-top: 1px solid hsl(0, 0%, 75%);
+  }
+  header nav form button {
+    width: 80%;
+    height: 50px;
+    border: none;
+    border-radius: 3em;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-size: 1.225rem;
+  }
+  header nav form button:nth-child(1) {
+    background-color: transparent;
+    margin-block-end: 1em;
+  }
+  header nav form button:nth-child(2) {
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    border-radius: 3em;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(180, 66%, 49%);
+  }
+  header .menu-button {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 40px;
+    background-color: transparent;
+    font-size: 1.625rem;
+    border: none;
+    z-index: 10;
+  }
+  main {
+    min-width: 375px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .section-1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    margin-block-end: 4em;
+  }
+  main .section-1 .left-section {
+    width: 100%;
+    height: auto;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .section-1 .left-section h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.625rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  main .section-1 .left-section p {
+    width: 75%;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.125rem;
+    text-wrap: wrap;
+    text-align: center;
+    margin-block: 1em 1em;
+    color: hsl(257, 7%, 63%);
+    line-height: 25px;
+    font-weight: 500;
+  }
+  main .section-1 .left-section button {
+    width: 50%;
+    height: 50px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    border-radius: 3em;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(180, 66%, 49%);
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  main .section-1 .right-section {
+    width: 100%;
+    height: 50%;
+    order: 1;
+  }
+  main .section-1 .right-section img {
+    width: 100%;
+    display: block;
+  }
+  main .section-2 {
+    width: 90%;
+    min-height: 180px;
+    background-color: hsla(0, 4%, 90%, 0.691);
+  }
+  main .section-2 .url-shortner {
+    width: 100%;
+    min-height: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 1em;
+    background-image: url("/images/bg-boost-mobile.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: hsl(257, 27%, 26%);
+  }
+  main .section-2 .url-shortner input {
+    width: 80%;
+    height: 50px;
+    border-radius: 0.5em;
+    text-indent: 1em;
+    margin-block: 2em 2em;
+  }
+  main .section-2 .url-shortner input::-moz-placeholder {
+    text-indent: 1em;
+  }
+  main .section-2 .url-shortner input::placeholder {
+    text-indent: 1em;
+  }
+  main .section-2 .url-shortner button {
+    width: 80%;
+    height: 50px;
+    border-radius: 0.5em;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(180, 66%, 49%);
+  }
+  main .section-2 .url-shortner .input-url-info {
+    display: none;
+  }
+  main .section-2 #results {
+    width: 100%;
+    height: auto;
+    margin-block-start: 1em;
+  }
+  main .section-2 #results .url-list {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-inline: auto;
+  }
+  main .section-2 #results .url-list .url {
+    width: 100%;
+    height: 150px;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0.5em;
+    margin-block: 0 1em;
+  }
+  main .section-2 #results .url-list .url .url-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  main .section-2 #results .url-list .url .url-info .original-url {
+    width: 100%;
+    font-weight: 700;
+    margin-block-end: 0.4em;
+  }
+  main .section-2 #results .url-list .url .url-info .short-url {
+    width: 100%;
+    text-align: left;
+    color: hsl(180, 66%, 49%);
+    margin-inline: 2em auto;
+  }
+}
+@media (width < 800px) and (width < 540px) {
+  main .section-2 #results .url-list .url .url-info .short-url {
+    margin-inline: 1.5em auto;
+  }
+}
+@media (width < 800px) {
+  main .section-2 #results .url-list .url .copy-btn {
+    margin-block-end: 1em;
+    margin-inline: auto;
+    width: 90%;
+    height: 50px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    border-radius: 3em;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(180, 66%, 49%);
+    border-radius: 0.3em;
+  }
+  main .section-2 #results .url-list .url .original-url-box {
+    width: 90%;
+    height: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: flex;
+    border-bottom: 2px solid hsl(0, 0%, 75%);
+    margin-inline: auto;
+  }
+  main .section-2 #results .url-list .url .original-url-box::-webkit-scrollbar {
+    display: none;
+  }
+  main .section-3 {
+    width: 100%;
+    min-height: 80vh;
+  }
+  main .section-3 .top-section {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(0, 4%, 90%, 0.691);
+  }
+  main .section-3 .top-section h2, main .section-3 .top-section p {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+  }
+  main .section-3 .top-section h2 {
+    font-size: 1.375rem;
+  }
+  main .section-3 .top-section p {
+    font-size: 0.825rem;
+    color: hsl(257, 7%, 63%);
+    margin-inline: 5em 5em;
+    margin-block-start: 1em;
+  }
+  main .section-3 .bottom-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsla(0, 4%, 90%, 0.691);
+    gap: 5em;
+    position: relative;
+  }
+  main .section-3 .bottom-section .card {
+    margin-block-start: 1em;
+    width: 300px;
+    height: 230px;
+    background-color: hsl(0, 0%, 100%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+  main .section-3 .bottom-section .card .card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    left: 38%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(257, 27%, 26%);
+  }
+  main .section-3 .bottom-section .card .card-icon img {
+    width: 55%;
+    height: 55%;
+    display: block;
+  }
+  main .section-3 .bottom-section .card .card-title, main .section-3 .bottom-section .card .card-text {
+    font-family: "Poppins", sans-serif;
+  }
+  main .section-3 .bottom-section .card .card-title {
+    margin-left: 1em;
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+  main .section-3 .bottom-section .card .card-text {
+    margin-inline: 3em 3em;
+    font-size: 0.725rem;
+    font-family: "Poppins", sans-serif;
+    color: hsl(257, 7%, 63%);
+    text-align: center;
+    line-height: 22px;
+  }
+  main .section-3 .bottom-section .card-3 {
+    margin-block-end: 2em;
+  }
+  main .section-3 .bottom-section::before {
+    content: "";
+    width: 5px;
+    height: 80%;
+    position: absolute;
+    left: 48.5%;
+    background-color: hsl(180, 66%, 49%);
+  }
+  main .section-4 {
+    width: 100%;
+    height: 30vh;
+    background-image: url("/images/bg-boost-mobile.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: hsl(257, 27%, 26%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+  main .section-4 h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.625rem;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+  }
+  main .section-4 button {
+    width: 180px;
+    height: 50px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    border-radius: 3em;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(180, 66%, 49%);
+    transition: 0.3s ease-out;
+  }
+  main .section-4 button a {
+    color: hsl(0, 0%, 100%);
+    font-family: "Poppins", sans-serif;
+    font-size: 1.125rem;
+  }
+  footer {
+    min-width: 375px;
+    width: 100%;
+    min-height: 60vh;
+    background-color: hsl(260, 8%, 14%);
+  }
+  footer .logo {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .logo svg path {
+    fill: hsl(0, 0%, 100%);
+  }
+  footer ul {
+    width: 100%;
+    margin-block: 2em 2em;
+  }
+  footer ul li:nth-child(1) {
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.025rem;
+    font-family: "Poppins", sans-serif;
+  }
+  footer ul li {
+    display: block;
+    text-align: center;
+  }
+  footer ul li a {
+    color: hsla(0, 4%, 90%, 0.691);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 0.825rem;
+  }
+  footer ul:nth-child(6) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+  footer ul:nth-child(6) li a {
+    font-size: 1.625rem;
+    color: hsl(0, 0%, 100%);
+  }
+}/*# sourceMappingURL=mobile.css.map */

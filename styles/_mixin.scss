@@ -1,0 +1,17 @@
+@import "./variables";
+
+// Get Started Button
+
+@mixin getStartedButton {
+    border: none;
+    font-family: $ff-100;
+    font-weight: 500;
+    border-radius: 3em;
+    color: $clr-neutral-500;
+    background-color: $clr-primary-100;
+}
+
+@mixin getStartedButtonHover {
+    background-color: $clr-secondary-300;
+    transition: $transition ease-in;
+}
